@@ -4,3 +4,18 @@
 
 layout: home
 ---
+
+<ul>
+{% for post in site.posts reversed limit:5 %}
+	<a href="{{ post.url }}">
+	<h2>
+		{{ post.title }}
+	</h2>
+	</a>
+	<p>
+		{{ post.content }}
+	</p>
+	<hr>
+{% endfor %}
+</ul>
+
